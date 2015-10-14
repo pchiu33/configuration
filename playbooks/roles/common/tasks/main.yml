@@ -30,7 +30,7 @@
 # https://help.github.com/articles/https-cloning-errors
 - name: Add git apt repository
   apt_repository: repo="{{ common_git_ppa }}"
-  wheni: ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu'
 
 - name: Install role-independent useful system packages
   # do this before log dir setup; rsyslog package guarantees syslog user present
