@@ -9,12 +9,12 @@ db:
 
 mongo:
   image: mongo:2.6
- volumes: 
-   - /var/devstack/mongo/data:/data
+  volumes: 
+    - /var/devstack/mongo/data:/data
 
 es:
  build: ../build/elasticsearch
-  image: edxops/elasticsearch:v1
+ image: edxops/elasticsearch:v1
  volumes:
    - /tmp/elasticsearch/data:/es-data
 
