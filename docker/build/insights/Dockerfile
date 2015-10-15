@@ -1,4 +1,4 @@
-FROM edxops/precise-common:v2
+FROM edxops/precise-common:v1
 MAINTAINER e0d
 
 USER docker
@@ -9,7 +9,7 @@ ENV PATH /tmp/ansible/bin:/bin:/sbin:/usr/sbin:/usr/bin
 ADD inventory /etc/ansible/hosts
 WORKDIR /edx/app/edx_ansible/edx_ansible/playbooks/edx-east
 RUN sudo git fetch --all
-RUN sudo git checkout e0d/docker
-RUN sudo ansible-playbook insights.yml -c local
+RUN sudo git checkout hack2015/gabe/analytics-hadoop
+RUN sudo ansible-playbook -t install insights.yml -c local
 CMD ["/edx/app/supervisor/venvs/supervisor/bin/supervisord -n --configuration /edx/app/supervisor/supervisord.conf"]
 EXPOSE 22 443 80
