@@ -9,7 +9,7 @@
 #
 #
 # Defaults for role insights
-# 
+#
 
 INSIGHTS_LMS_BASE: 'http://127.0.0.1:8000'
 INSIGHTS_BASE_URL: 'http://127.0.0.1:8110'
@@ -141,7 +141,7 @@ INSIGHTS_REPOS:
 # vars are namespace with the module name.
 #
 insights_environment:
-  DJANGO_SETTINGS_MODULE: "analytics_dashboard.settings.production"
+  DJANGO_SETTINGS_MODULE: "analytics_dashboard.settings.dev"
   ANALYTICS_DASHBOARD_CFG: "{{ COMMON_CFG_DIR  }}/{{ insights_service_name }}.yml"
 
 insights_service_name: insights
