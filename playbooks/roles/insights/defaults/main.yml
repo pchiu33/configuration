@@ -164,7 +164,7 @@ insights_gunicorn_port: "8110"
 insights_gunicorn_timeout: "300"
 insights_wsgi: "analytics_dashboard.wsgi:application"
 
-insights_django_settings: "analytics_dashboard.settings.production"
+insights_django_settings: "analytics_dashboard.settings.dev"
 insights_manage: "{{ insights_code_dir }}/manage.py"
 
 insights_requirements_base: "{{ insights_code_dir }}/requirements"
